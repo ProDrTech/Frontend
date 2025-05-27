@@ -41,7 +41,7 @@
       }
     }
 
-    div ~ h2 {
+    div~h2 {
       font-size: 28px;
       font-weight: 600;
       color: #fff;
@@ -72,7 +72,7 @@
         }
       }
 
-      div ~ h2 {
+      div~h2 {
         font-size: 35px;
       }
     }
@@ -122,7 +122,7 @@
         }
       }
 
-      div ~ h2 {
+      div~h2 {
         font-size: 33px;
       }
     }
@@ -150,7 +150,7 @@
         }
       }
 
-      div ~ h2 {
+      div~h2 {
         font-size: 40px;
       }
     }
@@ -174,7 +174,7 @@
         }
       }
 
-      div ~ h2 {
+      div~h2 {
         font-size: 48px;
       }
     }
@@ -202,8 +202,107 @@
         }
       }
 
-      div ~ h2 {
+      div~h2 {
         font-size: 58px;
+      }
+    }
+  }
+}
+
+.wrapper {
+  &_xs {
+    flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    height: 226px;
+
+    [first-card] {
+      display: flex;
+      flex-direction: column;
+      height: 99%;
+      justify-content: space-between;
+    }
+
+    [second-card] {
+      display: flex;
+      align-items: start;
+      gap: 5px;
+      height: 100%;
+
+      svg[first] {
+        flex-shrink: 0;
+        height: 100%;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+
+    [abs] {
+      position: absolute;
+      left: 41.5px;
+      top: 70px;
+    }
+
+  }
+
+  &_sm {
+    display: none;
+  }
+}
+
+@include mixins.media-largePhone {
+  .wrapper {
+    &_xs {
+      display: none;
+    }
+
+    &_sm {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: start;
+      gap: 5.71px;
+      height: 246px;
+
+      [first] {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        height: 100%;
+      }
+
+      [second] {
+        display: flex;
+        align-items: start;
+        gap: 5.68px;
+        height: 100%;
+
+        svg[first] {
+          flex-shrink: 0;
+          height: 100%;
+        }
+
+        div {
+          height: 100%;
+          display: flex;
+          gap: 7px;
+          flex-direction: column;
+        }
+      }
+
+      [second] ~ svg {
+        position: absolute;
+        top: 76px;
+        left: 81.79px;
       }
     }
   }

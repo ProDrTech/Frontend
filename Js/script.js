@@ -3,3 +3,7 @@ jQuery(document).ready(function () {
     travelocity: 0.07,
   });
 });
+
+window.addEventListener('DOMContentLoaded', async (e) => {
+
+})
