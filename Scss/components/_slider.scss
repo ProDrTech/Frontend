@@ -1,5 +1,5 @@
-@use "../abstract/mixins";
-@use "../abstract/variables";
+@import "../abstract/mixins";
+@import "../abstract/variables";
 
 .slider_component {
   border: {
@@ -45,7 +45,7 @@
   gap: 16px;
 }
 
-@include mixins.media-largeLaptop {
+@include media-largeLaptop {
   .slider_component {
     padding: 20px 0;
     ul {

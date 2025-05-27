@@ -1,5 +1,5 @@
-@use "../abstract/mixins";
-@use "../abstract/variables";
+@import "../abstract/mixins";
+@import "../abstract/variables";
 
 .btn-border {
   display: inline-block;
@@ -25,13 +25,13 @@
   text-decoration: none;
 }
 
-@include mixins.media-compactLaptop {
+@include media-compactLaptop {
   .btn {
     padding: 12px 14px;
   }
 }
 
-@include mixins.media-largeLaptop {
+@include media-largeLaptop {
   .btn {
     padding: 16px 24px;
     font-size: 18px;
