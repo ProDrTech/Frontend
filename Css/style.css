@@ -458,7 +458,36 @@ body {
     font-size: 58px;
   }
 }
-.wrapper_xs {
+.default {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: start;
+}
+.default [first] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.default [second] {
+  display: flex;
+  align-items: start;
+  height: 100%;
+}
+.default [second] svg[first] {
+  flex-shrink: 0;
+  height: 100%;
+}
+.default [second] div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.default [second] ~ svg {
+  position: absolute;
+}
+
+.wrapper_xxs {
   flex-shrink: 0;
   position: absolute;
   left: 50%;
@@ -468,75 +497,149 @@ body {
   gap: 5px;
   height: 226px;
 }
-.wrapper_xs [first-card] {
+.wrapper_xxs [first-card] {
   display: flex;
   flex-direction: column;
   height: 99%;
   justify-content: space-between;
 }
-.wrapper_xs [second-card] {
+.wrapper_xxs [second-card] {
   display: flex;
   align-items: start;
   gap: 5px;
   height: 100%;
 }
-.wrapper_xs [second-card] svg[first] {
+.wrapper_xxs [second-card] svg[first] {
   flex-shrink: 0;
   height: 100%;
 }
-.wrapper_xs [second-card] div {
+.wrapper_xxs [second-card] div {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.wrapper_xs [abs] {
+.wrapper_xxs [abs] {
   position: absolute;
   left: 41.5px;
   top: 70px;
 }
-.wrapper_sm {
+.wrapper_sm, .wrapper_xs, .wrapper_s, .wrapper_compactTablet, .wrapper_mediumTablet {
   display: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 425px) {
+  .wrapper_xxs, .wrapper_sm, .wrapper_s, .wrapper_compactTablet, .wrapper_mediumTablet {
+    display: none;
+  }
   .wrapper_xs {
+    height: 210px;
+    display: flex;
+    gap: 3.95px;
+  }
+  .wrapper_xs [first] {
+    gap: 4.23px;
+  }
+  .wrapper_xs [second] {
+    gap: 3.93px;
+  }
+  .wrapper_xs [second] div {
+    gap: 5.93px;
+  }
+  .wrapper_xs [second] ~ svg {
+    top: 64.35px;
+    left: 56.59px;
+  }
+}
+@media screen and (min-width: 460px) {
+  .wrapper_xxs, .wrapper_xs, .wrapper_sm, .wrapper_compactTablet, .wrapper_mediumTablet {
+    display: none;
+  }
+  .wrapper_s {
+    height: 220px;
+    display: flex;
+    gap: 4.3px;
+  }
+  .wrapper_s [first] {
+    gap: 4.44px;
+  }
+  .wrapper_s [second] {
+    gap: 4.28px;
+  }
+  .wrapper_s [second] div {
+    gap: 6.21px;
+  }
+  .wrapper_s [second] ~ svg {
+    top: 67.42px;
+    left: 61.63px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_compactTablet, .wrapper_mediumTablet {
     display: none;
   }
   .wrapper_sm {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: start;
     gap: 5.71px;
     height: 246px;
+    display: flex;
   }
   .wrapper_sm [first] {
-    display: flex;
-    flex-direction: column;
     gap: 5px;
-    height: 100%;
   }
   .wrapper_sm [second] {
-    display: flex;
-    align-items: start;
     gap: 5.68px;
-    height: 100%;
-  }
-  .wrapper_sm [second] svg[first] {
-    flex-shrink: 0;
-    height: 100%;
   }
   .wrapper_sm [second] div {
-    height: 100%;
-    display: flex;
     gap: 7px;
-    flex-direction: column;
   }
   .wrapper_sm [second] ~ svg {
-    position: absolute;
     top: 65px;
     left: 81.79px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_mediumTablet {
+    display: none;
+  }
+  .wrapper_compactTablet {
+    gap: 7.4px;
+    height: 318px;
+    display: flex;
+  }
+  .wrapper_compactTablet [first] {
+    gap: 6.41px;
+  }
+  .wrapper_compactTablet [second] {
+    gap: 7.36px;
+  }
+  .wrapper_compactTablet [second] div {
+    gap: 7.69px;
+  }
+  .wrapper_compactTablet [second] ~ svg {
+    top: 97.45px;
+    left: 105.98px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_compactTablet {
+    display: none;
+  }
+  .wrapper_mediumTablet {
+    gap: 9.97px;
+    height: 386px;
+    display: flex;
+  }
+  .wrapper_mediumTablet [first] {
+    gap: 7.78px;
+  }
+  .wrapper_mediumTablet [second] {
+    gap: 9.92px;
+  }
+  .wrapper_mediumTablet [second] div {
+    gap: 9.34px;
+  }
+  .wrapper_mediumTablet [second] ~ svg {
+    top: 118.29px;
+    left: 142.85px;
   }
 }
 

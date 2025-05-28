@@ -1,3 +1,16 @@
+// Hero Media Screen
+@mixin media-compactPhone {
+    @media screen and (min-width: 425px) {
+        @content;
+    }
+}
+
+@mixin media-hero_4 {
+    @media screen and (min-width: 460px) {
+        @content;
+    }
+}
+
 // Phones Media Screen
 @mixin media-largePhone {
     @media screen and (min-width: 600px) {
