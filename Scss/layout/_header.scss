@@ -1,5 +1,5 @@
-@use "../abstract/mixins";
-@use "../abstract/variables";
+@import "../abstract/mixins";
+@import "../abstract/variables";
 
 .header {
   display: flex;
@@ -54,7 +54,7 @@
   border: 1.5px solid #1c1c21;
 }
 
-@include mixins.media-largePhone {
+@include media-largePhone {
   .header {
     padding: {
       left: 18px;
@@ -67,7 +67,7 @@
   }
 }
 
-@include mixins.media-compactTablet {
+@include media-compactTablet {
   .header {
     padding: {
       left: 20px;
@@ -80,7 +80,7 @@
   }
 }
 
-@include mixins.media-compactLaptop {
+@include media-compactLaptop {
   .header {
     height: 80px;
     display: flex;
@@ -170,7 +170,7 @@
   }
 }
 
-@include mixins.media-mediumLaptop {
+@include media-mediumLaptop {
   .header {
     height: 89px;
 
@@ -192,7 +192,7 @@
   }
 }
 
-@include mixins.media-largeLaptop {
+@include media-largeLaptop {
   .header {
     height: 119px;
     padding: {

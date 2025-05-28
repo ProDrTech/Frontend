@@ -1,4 +1,4 @@
-@use '../abstract/variables' as vrb;
+@import "../abstract/variables";
 
 * {
     margin: 0;
@@ -21,6 +21,6 @@ button {
 }
 
 body {
-    background-color: vrb.$main_bg;
-    font-family: vrb.$font-family;
+    background-color: $main_bg;
+    font-family: $font-family;
 }
