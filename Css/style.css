@@ -523,12 +523,12 @@ body {
   left: 41.5px;
   top: 70px;
 }
-.wrapper_sm, .wrapper_xs, .wrapper_s, .wrapper_compactTablet, .wrapper_mediumTablet {
+.wrapper_sm, .wrapper_xs, .wrapper_s, .wrapper_compactTablet, .wrapper_mediumTablet, .wrapper_compactLaptop, .wrapper_mediumLaptop, .wrapper_largeLaptop {
   display: none;
 }
 
 @media screen and (min-width: 425px) {
-  .wrapper_xxs, .wrapper_sm, .wrapper_s, .wrapper_compactTablet, .wrapper_mediumTablet {
+  .wrapper_xxs, .wrapper_sm, .wrapper_s, .wrapper_compactTablet, .wrapper_mediumTablet, .wrapper_compactLaptop, .wrapper_mediumLaptop, .wrapper_largeLaptop {
     display: none;
   }
   .wrapper_xs {
@@ -551,7 +551,7 @@ body {
   }
 }
 @media screen and (min-width: 460px) {
-  .wrapper_xxs, .wrapper_xs, .wrapper_sm, .wrapper_compactTablet, .wrapper_mediumTablet {
+  .wrapper_xxs, .wrapper_xs, .wrapper_sm, .wrapper_compactTablet, .wrapper_mediumTablet, .wrapper_compactLaptop, .wrapper_mediumLaptop, .wrapper_largeLaptop {
     display: none;
   }
   .wrapper_s {
@@ -574,7 +574,7 @@ body {
   }
 }
 @media screen and (min-width: 600px) {
-  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_compactTablet, .wrapper_mediumTablet {
+  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_compactTablet, .wrapper_mediumTablet, .wrapper_compactLaptop, .wrapper_mediumLaptop, .wrapper_largeLaptop {
     display: none;
   }
   .wrapper_sm {
@@ -597,7 +597,7 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
-  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_mediumTablet {
+  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_mediumTablet, .wrapper_compactLaptop, .wrapper_mediumLaptop, .wrapper_largeLaptop {
     display: none;
   }
   .wrapper_compactTablet {
@@ -620,7 +620,7 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
-  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_compactTablet {
+  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_compactTablet, .wrapper_compactLaptop, .wrapper_mediumLaptop, .wrapper_largeLaptop {
     display: none;
   }
   .wrapper_mediumTablet {
@@ -640,6 +640,75 @@ body {
   .wrapper_mediumTablet [second] ~ svg {
     top: 118.29px;
     left: 142.85px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_compactTablet, .wrapper_mediumTablet, .wrapper_mediumLaptop, .wrapper_largeLaptop {
+    display: none;
+  }
+  .wrapper_compactLaptop {
+    gap: 12.26px;
+    height: 420px;
+    display: flex;
+  }
+  .wrapper_compactLaptop [first] {
+    gap: 8.46px;
+  }
+  .wrapper_compactLaptop [second] {
+    gap: 12.2px;
+  }
+  .wrapper_compactLaptop [second] div {
+    gap: 10.15px;
+  }
+  .wrapper_compactLaptop [second] ~ svg {
+    top: 129.01px;
+    left: 170.6px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_compactTablet, .wrapper_mediumTablet, .wrapper_compactLaptop, .wrapper_largeLaptop {
+    display: none;
+  }
+  .wrapper_mediumLaptop {
+    gap: 16.04px;
+    height: 424px;
+    display: flex;
+  }
+  .wrapper_mediumLaptop [first] {
+    gap: 12.42px;
+  }
+  .wrapper_mediumLaptop [second] {
+    gap: 10.43px;
+  }
+  .wrapper_mediumLaptop [second] div {
+    gap: 11.59px;
+  }
+  .wrapper_mediumLaptop [second] ~ svg {
+    top: 130.84px;
+    left: 148.37px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .wrapper_xxs, .wrapper_xs, .wrapper_s, .wrapper_sm, .wrapper_compactTablet, .wrapper_mediumTablet, .wrapper_compactLaptop, .wrapper_mediumLaptop {
+    display: none;
+  }
+  .wrapper_largeLaptop {
+    gap: 20px;
+    height: 512px;
+    display: flex;
+  }
+  .wrapper_largeLaptop [first] {
+    gap: 15px;
+  }
+  .wrapper_largeLaptop [second] {
+    gap: 13px;
+  }
+  .wrapper_largeLaptop [second] div {
+    gap: 14px;
+  }
+  .wrapper_largeLaptop [second] ~ svg {
+    top: 158px;
+    left: 188.48px;
   }
 }
 

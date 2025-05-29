@@ -298,7 +298,10 @@
   &_xs,
   &_s,
   &_compactTablet,
-  &_mediumTablet {
+  &_mediumTablet,
+  &_compactLaptop,
+  &_mediumLaptop,
+  &_largeLaptop {
     display: none;
   }
 }
@@ -310,7 +313,10 @@
     &_sm,
     &_s,
     &_compactTablet,
-    &_mediumTablet {
+    &_mediumTablet,
+    &_compactLaptop,
+    &_mediumLaptop,
+    &_largeLaptop {
       display: none;
     }
 
@@ -346,7 +352,10 @@
     &_xs,
     &_sm,
     &_compactTablet,
-    &_mediumTablet {
+    &_mediumTablet,
+    &_compactLaptop,
+    &_mediumLaptop,
+    &_largeLaptop {
       display: none;
     }
 
@@ -382,7 +391,10 @@
     &_xs,
     &_s,
     &_compactTablet,
-    &_mediumTablet {
+    &_mediumTablet,
+    &_compactLaptop,
+    &_mediumLaptop,
+    &_largeLaptop {
       display: none;
     }
 
@@ -418,7 +430,10 @@
     &_xs,
     &_s,
     &_sm,
-    &_mediumTablet {
+    &_mediumTablet,
+    &_compactLaptop,
+    &_mediumLaptop,
+    &_largeLaptop {
       display: none;
     }
 
@@ -449,11 +464,15 @@
 
 @include media-mediumTablet {
   .wrapper {
+
     &_xxs,
     &_xs,
     &_s,
     &_sm,
-    &_compactTablet {
+    &_compactTablet,
+    &_compactLaptop,
+    &_mediumLaptop,
+    &_largeLaptop {
       display: none;
     }
 
@@ -477,6 +496,123 @@
       [second]~svg {
         top: 118.29px;
         left: 142.85px;
+      }
+    }
+  }
+}
+
+@include media-compactLaptop {
+  .wrapper {
+
+    &_xxs,
+    &_xs,
+    &_s,
+    &_sm,
+    &_compactTablet,
+    &_mediumTablet,
+    &_mediumLaptop,
+    &_largeLaptop {
+      display: none;
+    }
+
+    &_compactLaptop {
+      gap: 12.26px;
+      height: 420px;
+      display: flex;
+
+      [first] {
+        gap: 8.46px;
+      }
+
+      [second] {
+        gap: 12.2px;
+
+        div {
+          gap: 10.15px;
+        }
+      }
+
+      [second]~svg {
+        top: 129.01px;
+        left: 170.6px;
+      }
+    }
+  }
+}
+
+@include media-mediumLaptop {
+  .wrapper {
+
+    &_xxs,
+    &_xs,
+    &_s,
+    &_sm,
+    &_compactTablet,
+    &_mediumTablet,
+    &_compactLaptop,
+    &_largeLaptop {
+      display: none;
+    }
+
+    &_mediumLaptop {
+      gap: 16.04px;
+      height: 424px;
+      display: flex;
+
+      [first] {
+        gap: 12.42px;
+      }
+
+      [second] {
+        gap: 10.43px;
+
+        div {
+          gap: 11.59px;
+        }
+      }
+
+      [second]~svg {
+        top: 130.84px;
+        left: 148.37px;
+      }
+    }
+  }
+}
+
+@include media-largeLaptop {
+  .wrapper {
+
+    &_xxs,
+    &_xs,
+    &_s,
+    &_sm,
+    &_compactTablet,
+    &_mediumTablet,
+    &_compactLaptop,
+    &_mediumLaptop {
+      display: none;
+    }
+
+    &_largeLaptop {
+      gap: 20px;
+      height: 512px;
+      display: flex;
+
+      [first] {
+        gap: 15px;
+      }
+
+      [second] {
+        gap: 13px;
+
+        div {
+          gap: 14px;
+        }
+      }
+
+      [second]~svg {
+        top: 158px;
+        left: 188.48px;
       }
     }
   }
